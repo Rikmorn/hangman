@@ -1,0 +1,31 @@
+{
+  "name": "hangman-webapp",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Roberto Sousa",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-local-storage": "^0.2.7",
+    "angular-route": "^1.5.8",
+    "angular-ui-bootstrap": "^2.0.1",
+    "config": "^1.21.0",
+    "ramda": "^0.22.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "del": "^2.2.1",
+    "globby": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "run-sequence": "^1.2.2",
+    "through2": "^2.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-paths": "^2.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

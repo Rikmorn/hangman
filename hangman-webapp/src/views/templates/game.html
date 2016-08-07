@@ -1,0 +1,72 @@
+<div class="container-fluid">
+    <div class="row" ng-show="userData == null">
+        <div class="col-md-12">
+            <div class="form-group center-block email-form">
+                <p class="lead">Welcome to Hangman, please enter your email to
+                    start</p>
+                <label for="hangManInputEmail">Email address</label>
+                <input type="email" class="form-control" id="hangManInputEmail"
+                       ng-model="email"
+                       placeholder="Enter your email here">
+            </div>
+            <button type="button" class="btn btn-default center-block"
+                    ng-click="createUser()">
+                Submit
+            </button>
+        </div>
+    </div>
+
+    <div class="row" ng-show="userData">
+        <div class="col-md-8">
+            <div class="row top-spacing">
+                <div class="col-md-8">
+                    <div class="col-md-1 bg-primary word"
+                         ng-repeat="word in gameData.status.completion track by $index">
+                        <h1 class="text-center">{{word}}</h1>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row top-spacing">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="hangManAttempt">Attempt</label>
+                        <input type="test" ng-model="attempt"
+                               class="form-control" id="hangManAttempt"
+                               placeholder="Type a character or word">
+                    </div>
+                    <button type="submit" class="btn btn-default"
+                            ng-click="sendTry()">Send Attempt
+                    </button>
+                </div>
+            </div>
+
+            <div class="row top-spacing" ng-show="gameData.state !== 0">
+                <div class="col-md-8">
+                    <h3 ng-show="gameData.state === 1">Congratulations you
+                        won!</h3>
+
+                    <h3 ng-show="gameData.state === -1">You lost. The word was
+                        "{{gameData.word}}", better luck
+                        next time!</h3>
+
+                    <button type="submit" class="btn btn-default"
+                            ng-click="newGame()">Create New Game
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 margin-left black">
+            <p class="lead">Attempts left: {{gameData.triesLeft}}</p>
+
+            <p>Attempts:</p>
+
+            <ol>
+                <li ng-repeat="play in gameData.status.plays track by $index">
+                    <p class="text-center">{{play}}</p>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+</div>

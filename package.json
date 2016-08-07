@@ -1,0 +1,12 @@
+{
+  "name": "hangman-compose",
+  "version": "0.0.1",
+  "author": "Roberto Sousa",
+  "scripts": {
+    "build": "docker-compose -f ./compose-development.yml build",
+    "start": "docker-compose -f ./compose-development.yml up -d",
+    "stop": "docker-compose -f ./compose-development.yml stop",
+    "logs": "docker-compose -f ./compose-development.yml logs"
+  },
+  "license": "ISC"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Hangman API",
+  "version": "0.0.1",
+  "description": "Hangman demo public API",
+  "url": "http://192.168.99.100/api",
+  "template": {
+    "withCompare": false,
+    "withGenerator": false,
+    "jQueryAjaxSetup": false
+  },
+  "sampleUrl": "/api"
+}

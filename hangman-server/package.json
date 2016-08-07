@@ -1,0 +1,40 @@
+{
+  "name": "hangman-server",
+  "version": "0.0.1",
+  "author": "Roberto Sousa",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "docs": "apidoc -i ./lib/model/ -o docs/api",
+    "env:testing": "MONGO_HOST=192.168.99.100 npm run",
+    "test": "mocha -G -R spec --globals CookieAccessInfo,Cookie,CookieJar --recursive --check-leaks ./test/e2e",
+    "coverage": "istanbul cover _mocha -- -G -R spec --globals CookieAccessInfo,Cookie,CookieJar --recursive --check-leaks ./test/e2e",
+    "build-web": "gulp build"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "body-parser": "^1.15.2",
+    "commander": "^2.9.0",
+    "compression": "^1.6.2",
+    "config": "^1.21.0",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "joi": "^9.0.4",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.2.5",
+    "node-uuid": "^1.4.7",
+    "ramda": "^0.22.0",
+    "random-words": "0.0.1",
+    "require-dir": "^0.3.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.16.1",
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^3.0.1",
+    "nock": "^8.0.0",
+    "rewire": "^2.5.2",
+    "supertest": "^2.0.0"
+  }
+}

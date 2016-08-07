@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h1 ng-show="games.length === 0">
+        Loading current game data
+    </h1>
+
+    <div class="row center-block table-width" ng-show="games.length > 0">
+        <h3>Games currently being played</h3>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Owner</th>
+                    <th>Word</th>
+                    <th>Tries Left</th>
+                    <th>Plays</th>
+                    <th>Completion</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="game in games track by $index">
+                    <td>{{game.ownerId}}</td>
+                    <td>{{game.word}}</td>
+                    <td>{{game.triesLeft}}</td>
+                    <td>{{game.status.plays}}</td>
+                    <td>{{game.status.completion}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

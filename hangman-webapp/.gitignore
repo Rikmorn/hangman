@@ -1,0 +1,17 @@
+# OSX
+.DS_Store
+/.DS_Store
+
+# Logging
+log/*
+*.log
+
+# Node & NPM
+npm-debug.log
+node_modules/
+
+# Build folder
+build
+
+# Webstorm
+.idea

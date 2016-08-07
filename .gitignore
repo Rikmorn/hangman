@@ -1,0 +1,24 @@
+# OSX
+.DS_Store
+/.DS_Store
+
+# Ignore IDE generated files
+.idea/
+
+# Docs
+docs
+
+# Ignore NPM and Node.js related files
+node_modules
+npm-debug.log
+
+# Istanbul coverage
+coverage
+
+# Ignore process logs
+process.log
+
+.nvmrc
+
+# front end build folders
+static/build/

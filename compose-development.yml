@@ -1,0 +1,32 @@
+mongo:
+  image: mongo:3.2.5
+  ports:
+    - "27017:27017"
+
+hangmanserver:
+  build: ./hangman-server
+  environment:
+    - MONGO_HOST=mongo
+  links:
+    - mongo
+  expose:
+    - "8881"
+  volumes:
+    - /var/log/hangman:/var/log/hangman
+  restart: always
+
+hangmanwebapp:
+  build: ./hangman-webapp
+  expose:
+    - "8882"
+  restart: always
+
+nginx:
+  build: ./nginx
+  expose:
+    - "80"
+  ports:
+    - "80:80"
+  links:
+    - hangmanserver
+    - hangmanwebapp
